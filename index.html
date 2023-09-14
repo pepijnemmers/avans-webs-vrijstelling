@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Home - DesignAgency</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="" height="26">
+                <div>Design<span class="accent">Agency</span></div>
+            </a>
+            <nav>
+                <input type="checkbox" name="hamburger" id="hamburger" class="hamburger">
+                <label for="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-times"></i>
+                </label>
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Portfolio</a></li>
+                    <li class="nested">
+                        <a href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Level 1 item 1</a></li>
+                            <li><a href="#">Level 1 item 2</a></li>
+                            <li><a href="#">Level 1 item 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="cta"><a href="#" class="btn btn--primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="content">
+                <h1>Increase Your Customers Loyalty and Satisfaction</h1>
+                <p>
+                    We help businesses like yours earn more customers, standout from competitors,  make more money.
+                </p>
+                <a href="#" class="btn btn--primary">Get Started</a>
+            </div>
+            <div class="image">
+                <img src="images/hero.png" alt="">
+            </div>
+        </div>
+        <div class="partners">
+            <div class="container">
+                <img src="images/google-logo.png" alt="Google logo">
+                <img src="images/trello-logo.png" alt="Trello logo">
+                <img src="images/monday-logo.png" alt="Monday logo">
+                <img src="images/notion-logo.png" alt="Notion logo">
+                <img src="images/slack-logo.png" alt="Slack logo">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
