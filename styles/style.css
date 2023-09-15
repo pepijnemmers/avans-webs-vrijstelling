@@ -145,6 +145,7 @@ a {
     --clr-primary-hover: #198347;
     --clr-secondary: #D7F5DC;
     --clr-accent: #F55F1D;
+    --section-spacing: 8em;
 }
 
 /* GLOBAL */
@@ -153,7 +154,7 @@ body {
     font-size: 1.125rem;
     font-weight: 400;
     background-color: var(--clr-background);
-    color: var(--clr-text);
+    color: var(--clr-text-secondary);
 }
 .container {
     width: min(90%, 1200px);
@@ -162,23 +163,89 @@ body {
 .accent {
     color: var(--clr-accent);
 }
+section:not(.hero) {
+    margin-top: var(--section-spacing);
+    margin-bottom: var(--section-spacing);
+}
+
+/* TEXT */
+h1, h2, h3 {
+    color: var(--clr-text);
+}
+h1 {
+    font-size: 3.3rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5em;
+    text-transform: capitalize;
+}
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+}
 
 /* COMPONENTS */
 .btn {
     display: inline-block;
     padding: .6em 1.2em;
     border-radius: .5em;
-    background-color: var(--clr-primary);
-    color: var(--clr-background);
     text-decoration: none;
     text-align: center;
     transition: background-color 0.2s ease-in-out;
-}
-.btn:hover {
-    background-color: var(--clr-primary-hover);
+    font-size: 1rem;
+    border: none;
+    outline: none;
 }
 .btn:focus-visible {
     outline: 2px solid var(--clr-accent);
+}
+.btn--primary {
+    background-color: var(--clr-primary);
+    color: var(--clr-background);
+}
+.btn--primary:hover {
+    background-color: var(--clr-primary-hover);
+}
+.btn--secondary {
+    background-color: var(--clr-accent);
+    color: #fff;
+}
+.btn--secondary:hover {
+    background-color: #e44a00;
+}
+.btn--tertiary {
+    background-color: transparent;
+    color: var(--clr-text);
+}
+.btn--tertiary i.fa-solid {
+    margin-left: .5em;
+}
+.btn--tertiary:hover {
+    background-color: var(--clr-accent);
+    color: #fff;
+}
+
+input {
+    padding: .6em 1em;
+    border-radius: .5em;
+    border: 1px solid #d1d1d1;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out;
+    outline: none;
+}
+input:hover {
+    border-color: #949494;
+}
+input:focus-visible {
+    border-color: #444444;
 }
 
 /* HEADER */
@@ -200,7 +267,7 @@ header a:not(.btn, .logo):focus-visible {
     color: var(--clr-text);
     font-weight: 600        ;
 }
-header .logo {
+.logo {
     display: flex;
     align-items: center;
     gap: .5em;
@@ -253,12 +320,63 @@ header .hamburger ~ label {
     display: none;
 }
 
-/* TEXT */
-h1 {
-    font-size: 3.3rem;
-    font-weight: 900;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
+/* NEWSLETTER */
+.newsletter {
+    text-align: center;
+}
+.newsletter h2 {
+    margin: 0;
+}
+.newsletter p {
+    color: var(--clr-text-secondary);
+    margin-bottom: 1em;
+}
+.newsletter .btn {
+    border: 1px solid var(--clr-accent);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--clr-primary);
+    color: var(--clr-text);
+    padding: 3em 0 .5em 0;
+}
+footer > p {
+    text-align: center;
+    font-size: .8rem;
+    color: var(--clr-secondary);
+    margin-top: 2.5em;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+footer .container div {
+    width: fit-content;
+}
+footer div p {
+    font-size: 1rem;
+    margin: .8em 0;
+    max-width: 300px;
+}
+footer .socials {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.5rem;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+footer ul li {
+    padding: .3em 0;
+}
+footer ul a {
+    text-decoration: none;
 }
 
 /* RESPONSIVE */
@@ -323,6 +441,9 @@ h1 {
 }
 
 @media screen and (max-width: 475px) {
+    :root {
+        --section-spacing: 5em;
+    }
     html {
         font-size: 85%;
     }
@@ -342,5 +463,11 @@ h1 {
 
     h1 {
         font-size: 2.3rem !important;
+    }
+
+    .newsletter input,
+    .newsletter .btn {
+        width: 100%;
+        margin-bottom: .8em;
     }
 }

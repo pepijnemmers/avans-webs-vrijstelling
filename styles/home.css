@@ -1,7 +1,7 @@
+/* HERO */
 header, .hero {
     background-color: var(--clr-secondary);
 }
-
 .hero {
     padding: 2em 0;
 }
@@ -31,6 +31,119 @@ header, .hero {
     padding: 1.5em 0;
 }
 
+/* ABOUT */
+.about-us h2 {
+    width: min(100%, 22em);
+}
+.about-us .cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.about-us .card {
+    flex: 1 1 30%;
+    min-width: min(100%, 200px);
+}
+.about-us .card .icon {
+    background-color: var(--clr-secondary);
+    display: inline-grid;
+    place-items: center;
+    padding: 1em;
+    border-radius: .8em;
+    margin-bottom: 1em;
+}
+.about-us .card svg {
+    height: 30px;
+    width: 30px;
+}
+.about-us .card p {
+    margin: .2em 0 .5em 0;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.stats div {
+    padding: 1em 2em;
+    border-right: 1px solid #dfe1df;
+}
+.stats div:last-child {
+    border-right: none;
+}
+.stats img {
+    margin: 1em auto;
+}
+.stats p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .6em;
+}
+.stats h3 {
+    font-size: 2.5rem;
+    color: var(--clr-primary);
+}
+
+/* TESTIMONIALS */
+.testimonials h2 {
+    width: min(100%, 22em);
+}
+.testimonials .slider {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2em;
+    padding: .2em 1em 1.5em 1em;
+    overflow: hidden;
+}
+.testimonials .slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3em;
+    background: linear-gradient(to right, transparent, var(--clr-background));
+}
+.testimonials .slider .btn-prev,
+.testimonials .slider .btn-next {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--clr-background);
+    color: var(--clr-accent);
+    font-size: 2rem;
+    border-radius: 50%;
+}
+.testimonials .slider .btn-prev {
+    left: 0;
+}
+.testimonials .slider .btn-next {
+    right: 0;
+}
+.testimonials .card {
+    min-width: min(100%, 17em);
+    padding: 2em;
+    border-radius: .8em;
+    border: 1px solid #dfe1df;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.testimonials .card p {
+    font-size: 1rem;
+}
+.testimonials .card h3 {
+    font-size: 1.2rem;
+    margin-top: 1em;
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 1220px) and (min-width: 1080px) {
     .hero h1 {
         font-size: 2.8rem;
@@ -61,8 +174,15 @@ header, .hero {
         scroll-snap-type: x mandatory;
         gap: 3em;
     }
+    .hero .partners .container::-webkit-scrollbar {
+        display: none;
+    }
     .hero .partners .container > img {
         scroll-snap-align: start;
+    }
+
+    .stats div {
+        border-right: none;
     }
 }
 @media screen and (max-width: 440px) {
