@@ -163,7 +163,7 @@ body {
 .accent {
     color: var(--clr-accent);
 }
-section:not(.hero) {
+section:not(:first-of-type) {
     margin-top: var(--section-spacing);
     margin-bottom: var(--section-spacing);
 }
@@ -233,7 +233,7 @@ h4 {
     color: #fff;
 }
 
-input {
+input, textarea {
     padding: .6em 1em;
     border-radius: .5em;
     border: 1px solid #d1d1d1;
@@ -241,11 +241,15 @@ input {
     transition: border-color 0.2s ease-in-out;
     outline: none;
 }
-input:hover {
+input:hover, textarea:hover {
     border-color: #949494;
 }
-input:focus-visible {
+input:focus-visible, textarea:focus-visible {
     border-color: #444444;
+}
+label {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 /* HEADER */
