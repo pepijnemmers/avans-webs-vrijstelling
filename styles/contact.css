@@ -1,7 +1,6 @@
 .contact {
     margin: 2em 0;
 }
-
 .contact .wrapper {
     display: flex;
     gap: 2em;
@@ -9,7 +8,6 @@
 .contact .wrapper > * {
     flex: 1 1 50%;
 }
-
 .contact form {
     display: flex;
     flex-direction: column;
@@ -17,15 +15,12 @@
 .contact form input, .contact form textarea {
     margin: .2em 0 1em 0;
 }
-
 .contact form textarea {
     resize: vertical;
 }
-
 .maps, .maps iframe {
     max-height: 80vh;
 }
-
 @media screen and (max-width: 768px) {
     .contact .wrapper {
         flex-direction: column;

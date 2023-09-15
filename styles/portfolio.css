@@ -1,12 +1,11 @@
 .portfolio {
     margin: 2em 0;
 }
-
 .portfolio .wrapper {
     column-count: 2;
     column-gap: 2em;
+    /* gekozen om hier geen flex/grid te gebruiken vanwege handigheid met verschillende hoogstes */
 }
-
 .portfolio .card {
     display: inline-block;
     break-inside: avoid;
@@ -14,11 +13,9 @@
     margin-bottom: 2em;
     padding: 1em;
 }
-
 .portfolio .card h3 {
     margin: 1em 0 .5em 0;
 }
-
 .portfolio .card .btn {
     margin-top: 1em;
 }
